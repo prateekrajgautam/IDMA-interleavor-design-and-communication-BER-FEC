@@ -1,0 +1,13 @@
+function[tx5,appendbit]=modulator(tx4,b,h)
+x=tx4;
+M=2^b;
+[r,c]=size(x);
+appendbit=b-mod(c,b);
+x=num2str(cat(2,x,zeros(1,appendbit)));
+x1=reshape(x,b,numel(x)/b)';
+% % h=modem.pskmod(2^b);
+% h=modem.pskmod(M,pi/M+pi/2);
+x2=reshape(x1,numel(x1)/b,b);
+x3=bin2dec(x2);
+x4=modulate(h,x3);
+tx5=x4;
