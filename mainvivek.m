@@ -23,11 +23,11 @@ clc
 %% user defined variables starts
 
 block=20;
-n=32;                %no.of users
+n=16;                %no.of users
 m=512;              %data length
-sl=64;              %spread length
+sl=32;              %spread length
 chiplen=m*sl;       %chip length
-itnum=5;            %no of iteration
+itnum=3;            %no of iteration
 ebnostart=0;        %step iteration
 ebnostep=3;
 ebnonum=5;
@@ -119,7 +119,8 @@ for z=1:ebnonum
 %% ========================================================================
 %%                     transmitter
         %% transmitter section begins
-        data=randint(n,m,[1,0]);                %generation of random bipolar data    
+%         data=randint(n,m,[1,0]);                %generation of random bipolar data    
+        data=randi([0,1],n,m);
 %         if useldpc==1
 %             data2=ldpcenc1(data,hh);
 %         else
