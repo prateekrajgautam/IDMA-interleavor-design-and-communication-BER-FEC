@@ -1,5 +1,5 @@
 # Interleaved Division Multiple Access
-## Interleavor disign and communication with Bit Error Rate computation graph with Foreward Error Correction
+## Interleavor design and communication with Bit Error Rate computation graph with Foreward Error Correction
 
 using LDPC codes and BHC codes.
 
